@@ -1,6 +1,7 @@
 # Docker 命令复制版
 
-## 安装 Docker
+## 安装 Docker Engine (Linux)
+> 官方安装指南：https://docs.docker.com/engine/install/
 
 ```bash
 sudo curl -fsSL https://get.docker.com | sudo sh
@@ -26,7 +27,7 @@ sudo nano /etc/docker/daemon.json
 {
   "registry-mirrors": [
     "https://docker.1ms.run",
-    "https://docker.xuanyuan.me",
+    "https://docker.xuanyuan.me"
   ]
 }
 ```
@@ -55,4 +56,9 @@ sudo docker run -d \
   -v portainer_data:/data \
   portainer/portainer-ce:2.33.6
 ```
+
+##  Docker Desktop (Linux Desktop & Windows & Mac)
+
+> 官方安装包：https://docs.docker.com/get-started/get-docker/
+
 
