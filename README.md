@@ -9,7 +9,7 @@
 ## 📂 文件结构描述
 
 ```c
-/EverythingInDocker
+/EfficientDocker
 ├── docs
 │   └── command-helper.md   // 教程中需要的命令
 ├── scripts
