@@ -2,7 +2,7 @@
 > 🚀 本仓库为 “高效 Docker” 系列教程的资料仓库，供大家下载、交流。
 
 ## 🎬 B 站视频地址
-[]()
+[【高效 Docker】01 - Docker 设计理念 - Docker 解决的问题、与虚拟机的区别、用途和局限性](https://www.bilibili.com/video/BV124e661EQ2/)
 
 ---
 
