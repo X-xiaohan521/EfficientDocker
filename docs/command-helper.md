@@ -61,4 +61,24 @@ sudo docker run -d \
 
 > 官方安装包：https://docs.docker.com/get-started/get-docker/
 
+## 安装 docker compose (For Docker Engine Only)
 
+### Ubuntu / Debian
+
+```bash
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+### RPM-based distributions (Fedora, RHEL, CentOS)
+
+```bash
+sudo yum update
+sudo yum install docker-compose-plugin
+```
+
+### Arch Linux
+
+```bash
+sudo pacman -S docker-compose
+```
