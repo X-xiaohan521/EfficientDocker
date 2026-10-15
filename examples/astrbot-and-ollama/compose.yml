@@ -1,0 +1,29 @@
+services:
+  astrbot:
+    image: m.daocloud.io/docker.io/soulter/astrbot:latest
+    container_name: astrbot
+    ports:
+      - "6185:6185"
+      - "6199:6199"
+    volumes:
+      - /srv/astrbot:/AstrBot/data
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    restart: always
+  
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    volumes:
+      - /srv/ollama:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ports:
+      - "11434:11434"
+  
