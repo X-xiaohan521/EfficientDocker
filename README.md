@@ -6,6 +6,8 @@
 
 [【高效 Docker】02 - Docker 安装与配置 - client, daemon 与 registry、Engine 与 Desktop、配置镜像源](https://www.bilibili.com/video/BV1Y7aT6dEzm/)
 
+[【高效 Docker】03 - Docker 四件套 - 深入详解 container, volume, image, network](https://www.bilibili.com/video/BV1QwaQ6yELA/)
+
 ---
 
 ## 📂 文件结构描述
@@ -15,7 +17,11 @@
 ├── docs
 │   └── command-helper.md   // 教程中需要的命令
 ├── scripts
-│    └── install-docker.sh  // Docker 安装脚本
+│   ├── astrbot-and-ollama  // astrbot 与 ollama 示例
+│   │   └── compose.yml
+│   ├── deploy-gitea        // gitea 示例
+│   │   └── compose.yml
+│   └── install-docker.sh  // Docker 安装脚本
 ├── examples
 │   └── hello-web           // hello-web 示例
 │       ├── hello-web-amd64 // x86_64 架构二进制
