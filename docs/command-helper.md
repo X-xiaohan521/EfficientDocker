@@ -82,3 +82,82 @@ sudo yum install docker-compose-plugin
 ```bash
 sudo pacman -S docker-compose
 ```
+
+## 例子：一个 debian 容器的生命周期
+### 1. 拉取 `debian:latest` 镜像
+
+```bash
+$ docker pull debian:latest
+$ docker images
+```
+
+### 2. 拉起容器
+
+```bash
+$ docker run --name debian-test -i -t debian:latest /bin/bash
+```
+
+* `-t`: tty 分配一个伪终端
+* `-i`: interactive 交互式（Keep STDIN open even if not attached）
+
+### 3. 查看容器状态
+
+```bash
+$ docker ps -a
+```
+
+### 4. 启动/停止容器
+
+```bash
+$ docker start/stop debian-test
+```
+
+### 5. 进出 shell
+
+```bash
+$ docker attach debian-test
+```
+
+### 6. 穿透执行命令
+> 在宿主机 shell 直接向容器内发送指令
+
+```bash
+$ docker exec debian-test ls -lah /
+$ docker exec -it debian-test /bin/bash
+```
+
+### 7. 删除容器
+> 容器文件系统内容将会丢失（卷除外）
+
+```bash
+$ docker rm debian-test
+```
+
+## 复杂 `docker run`
+
+```bash
+docker run -it -d \
+  --name debian-test \
+  -p 8080:8080 \
+  -v ./:/mnt \
+  debian:latest /bin/bash
+```
+
+* `-d`: detach 在后台运行
+* `-p`: port 暴露端口（左外右内）
+* `-v`: volume 挂载卷（左外右内）
+
+> 所有 docker run 可用的参数可在 https://docs.docker.com/reference/cli/docker/container/run/ 找到。
+
+## docker-compose
+> 一个用于规范化容器创建的 docker 插件
+> 配置 `compose.yml` / `docker-compose.yml`
+
+官方文档：https://docs.docker.com/reference/compose-file/
+
+加载当前目录下 `docker-compose.yml` 或 `compose.yml` 并启动为 stack：
+
+```sh
+$ docker compose up -d
+```
+
