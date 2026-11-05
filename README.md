@@ -8,6 +8,10 @@
 
 [【高效 Docker】03 - Docker 四件套 - 深入详解 container, volume, image, network](https://www.bilibili.com/video/BV1QwaQ6yELA/)
 
+[【高效 Docker】04 - Docker Compose - compose.yml, portainer stack, gitea astrbot 部署](https://www.bilibili.com/video/BV1hoJm6MEvG/)
+
+[【高效 Docker】05 - Image 镜像 - A Part - 镜像结构、image layer、构建镜像、Dockerfile 详解](https://www.bilibili.com/video/BV1QFxc6pEDs/?share_source=copy_web&vd_source=47fc14225eaa66bfcf4c7c5650e950cc)
+
 ---
 
 ## 📂 文件结构描述
