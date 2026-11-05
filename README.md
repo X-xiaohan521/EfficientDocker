@@ -8,6 +8,10 @@
 
 [【高效 Docker】03 - Docker 四件套 - 深入详解 container, volume, image, network](https://www.bilibili.com/video/BV1QwaQ6yELA/)
 
+[【高效 Docker】04 - Docker Compose - compose.yml, portainer stack, gitea astrbot 部署](https://www.bilibili.com/video/BV1hoJm6MEvG/)
+
+[【高效 Docker】05 - Image 镜像 - A Part - 镜像结构、image layer、构建镜像、Dockerfile 详解](https://www.bilibili.com/video/BV1QFxc6pEDs/?share_source=copy_web&vd_source=47fc14225eaa66bfcf4c7c5650e950cc)
+
 ---
 
 ## 📂 文件结构描述
@@ -17,16 +21,18 @@
 ├── docs
 │   └── command-helper.md   // 教程中需要的命令
 ├── scripts
+│   └── install-docker.sh  // Docker 安装脚本
+├── examples
 │   ├── astrbot-and-ollama  // astrbot 与 ollama 示例
 │   │   └── compose.yml
 │   ├── deploy-gitea        // gitea 示例
 │   │   └── compose.yml
-│   └── install-docker.sh  // Docker 安装脚本
-├── examples
-│   └── hello-web           // hello-web 示例
-│       ├── hello-web-amd64 // x86_64 架构二进制
-│       ├── hello-web-arm64 // arm64 架构二进制
-│       └── hello-web.go    // 源码
+│   └── hello-web                 // hello-web 示例
+│       ├── Dockerfile            // 一段构建 Dockerfile
+│       ├── Two-Stages-Dockerfile // 二段构建 Dockerfile
+│       ├── hello-web-amd64       // x86_64 架构二进制
+│       ├── hello-web-arm64       // arm64 架构二进制
+│       └── hello-web.go          // 源码
 ├── LICENSE
 └── README.md
 ```
