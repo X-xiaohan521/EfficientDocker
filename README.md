@@ -21,16 +21,18 @@
 ├── docs
 │   └── command-helper.md   // 教程中需要的命令
 ├── scripts
+│   └── install-docker.sh  // Docker 安装脚本
+├── examples
 │   ├── astrbot-and-ollama  // astrbot 与 ollama 示例
 │   │   └── compose.yml
 │   ├── deploy-gitea        // gitea 示例
 │   │   └── compose.yml
-│   └── install-docker.sh  // Docker 安装脚本
-├── examples
-│   └── hello-web           // hello-web 示例
-│       ├── hello-web-amd64 // x86_64 架构二进制
-│       ├── hello-web-arm64 // arm64 架构二进制
-│       └── hello-web.go    // 源码
+│   └── hello-web                 // hello-web 示例
+│       ├── Dockerfile            // 一段构建 Dockerfile
+│       ├── Two-Stages-Dockerfile // 二段构建 Dockerfile
+│       ├── hello-web-amd64       // x86_64 架构二进制
+│       ├── hello-web-arm64       // arm64 架构二进制
+│       └── hello-web.go          // 源码
 ├── LICENSE
 └── README.md
 ```
